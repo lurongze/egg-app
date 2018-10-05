@@ -1,0 +1,16 @@
+{
+	"client": "taro-x/dist/",
+	"svr": "egg-app/",
+	"miniprogramRoot": "taro-x/dist/",
+	"qcloudRoot": "egg-app/",
+	"setting": {
+		"urlCheck": false,
+		"es6": false,
+		"postcss": false,
+		"minified": false,
+		"newFeature": true
+	},
+	"appid": "wxe22a8310f6aadeff",
+	"projectname": "tbk-taro-egg",
+	"condition": {}
+}
