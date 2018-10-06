@@ -17,11 +17,20 @@ class TbkController extends Controller {
   async viewDetail() {
     const { itemId, platform } = this.ctx.request.query;
     const itemInfo = await this.ctx.service.tbk.getItemInfo(itemId, platform);
-    console.log('itemInfo', itemInfo);
-    this.ctx.body = {
-      code: 200,
-      data: itemInfo
+    let body = {};
+    if (itemInfo) {
+        body = {
+            code: 200,
+            data: itemInfo
+        };
+    } else {
+        body = {
+            code: 400,
+            data: '',
+            message: '请求失败！'
+        };
     }
+      this.ctx.body = body;
   }
 }
 
