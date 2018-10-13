@@ -23,6 +23,12 @@ class TbkService extends Service {
         }
     }
 
+    async getBaseData() {
+        const queryString = 'SELECT item_cate FROM tbk_item GROUP BY item_cate ORDER BY item_cate';
+        const allCategoryList = await this.app.mysql.query(queryString);
+        return allCategoryList;
+    }
+
     async spiderInfo(itemId, platform) {
         if (platform === '天猫') {
             return this.spiderInfoFromTmall(itemId);
