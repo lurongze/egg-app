@@ -29,5 +29,10 @@ module.exports = appInfo => {
       agent: false,
   };
 
+  config.cors = {
+    origin: '*',
+    allowMethods: 'GET,HEAD,PUT,POST,DELETE,PATCH'
+  };
+
   return config;
 };
