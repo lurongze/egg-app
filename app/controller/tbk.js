@@ -6,7 +6,7 @@ const ApiClient = require('../utils/tbk/index.js').ApiClient;
 class TbkController extends Controller {
 
   async getBaseData() {
-      let body = { show: false, code: 200 };
+      let body = { show: true, code: 200 };
       const list = await this.ctx.service.tbk.getBaseData();
       body = Object.assign(body, {categories: list});
       this.ctx.body = body;
