@@ -10,4 +10,6 @@ module.exports = app => {
   router.get('/tbk/item/viewDetail', controller.tbk.viewDetail);
   router.get('/tbk/item/getPassword', controller.tbk.getPassword);
   router.get('/tbk/item/getBaseData', controller.tbk.getBaseData);
+  router.get('/cosplay-gallery/index', controller.cosplayGallery.index);
+  router.get('/cosplay-gallery/list', controller.cosplayGallery.getList);
 };
